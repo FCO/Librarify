@@ -17,5 +17,5 @@ multi EXPORT(&sub) is export {
 
         "&" ~ @cmd.join("-") => &sub.assuming(|@data) if @cmd
     }
-    Map.new: '&lib-funcs' => sub { %cmds },
+    Map.new: 'LIBRARY' => %cmds,
 }
